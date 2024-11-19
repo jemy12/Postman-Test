@@ -1,0 +1,2013 @@
+{
+	"info": {
+		"_postman_id": "125858ed-125a-4885-b9ee-9e2469c783ad",
+		"name": "Lapor Folkatech - QA Automation",
+		"description": "Collection ini peruntukan dan dipergunakan hanya untuk kebutuhan technical test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "Get User Profile",
+							"id": "283c96c7-82c3-4da8-82af-0a57245e641d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvc2FwYTEyOS5rZW1lbnBwcGEuZ28uaWRcL2FwaVwvbG9naW4iLCJpYXQiOjE2OTM5MDQwNjgsImV4cCI6MTY5MzkwNzY2OCwibmJmIjoxNjkzOTA0MDY4LCJqdGkiOiJEQjJWUFQxV1RuQTN3UTV6Iiwic3ViIjoxMCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.iTrDWmgvV450couanyPQ8wyiRHMlccGJimHGeYtda-E"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/user/profile"
+							},
+							"response": [
+								{
+									"id": "4eaa3105-2e1b-4d16-818d-82d2ebf5ee50",
+									"name": "200 - OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{api}}/api/user/profile"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Jul 2023 16:00:45 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Jul 2023 16:00:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.33"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 7,\n        \"name\": \"Rahmat Saefulloh\",\n        \"email\": \"rhmtsaepuloh@gmail.com\",\n        \"email_verified_at\": null,\n        \"role_id\": 2,\n        \"unit_id\": null,\n        \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n        \"updated_at\": \"2023-07-23T15:51:13.000000Z\",\n        \"deleted_at\": null,\n        \"provider_name\": null,\n        \"provider_id\": null,\n        \"phone_number\": null,\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n        \"last_login\": \"2023-07-23 22:51:13\",\n        \"image_profile\": null,\n        \"is_active\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update User Profile",
+							"id": "3e4ed021-0342-4592-a14f-a54faa2c57c6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Rahmat Saefulloh\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{api}}/api/user/profile"
+							},
+							"response": [
+								{
+									"id": "b34767bb-e46a-457c-a72d-942b12c8a2cb",
+									"name": "200 - OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Rahmat Saefulloh\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{api}}/api/user/profile"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Jul 2023 16:13:18 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Jul 2023 16:13:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.33"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"message\": \"Data berhasil disimpan\",\n    \"data\": {\n        \"id\": 7,\n        \"name\": \"Rahmat Saefulloh\",\n        \"email\": \"rhmtsaepuloh@gmail.com\",\n        \"email_verified_at\": null,\n        \"role_id\": 2,\n        \"unit_id\": null,\n        \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n        \"updated_at\": \"2023-07-23T15:51:13.000000Z\",\n        \"deleted_at\": null,\n        \"provider_name\": null,\n        \"provider_id\": null,\n        \"phone_number\": null,\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n        \"last_login\": \"2023-07-23 22:51:13\",\n        \"image_profile\": null,\n        \"is_active\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Change Password",
+							"id": "2f24fd2b-6c7b-4818-bfd1-aa8bb1bed692",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\": \"Qwerty123!\",\n    \"newPassword\": \"12345\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{api}}/api/user/change-password"
+							},
+							"response": [
+								{
+									"id": "6833a2ff-e4de-4793-a206-25a8a22aa4ef",
+									"name": "200 - OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"oldPassword\": \"Qwerty123!\",\n    \"newPassword\": \"12345\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{api}}/api/user/change-password"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 24 Jul 2023 07:45:51 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 24 Jul 2023 07:45:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.33"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"message\": \"Data berhasil diubah.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Change Avatar",
+							"id": "39e96db4-175f-422d-8fc9-0143918dd952",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "userfile",
+											"type": "file",
+											"src": "/Users/rhmtsaepuloh/Downloads/Untitled-1-01.png"
+										}
+									]
+								},
+								"url": "{{api}}/api/user/change-avatar"
+							},
+							"response": [
+								{
+									"id": "acdef577-f1ec-4c81-969c-f1146171ec29",
+									"name": "200 - OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "userfile",
+													"type": "file",
+													"src": [
+														"/Users/rhmtsaepuloh/Downloads/5wPdO_1688622116.jpg"
+													]
+												}
+											]
+										},
+										"url": "{{api}}/api/user/change-avatar"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 24 Jul 2023 08:13:04 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 24 Jul 2023 08:13:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/7.4.33"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"message\": \"Data berhasil disimpan.\",\n    \"data\": {\n        \"id\": 7,\n        \"name\": \"Rahmat Saefulloh\",\n        \"email\": \"rhmtsaepuloh@gmail.com\",\n        \"email_verified_at\": null,\n        \"role_id\": 2,\n        \"unit_id\": null,\n        \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n        \"updated_at\": \"2023-07-24T08:13:04.000000Z\",\n        \"deleted_at\": null,\n        \"provider_name\": null,\n        \"provider_id\": null,\n        \"phone_number\": null,\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n        \"last_login\": \"2023-07-23 22:51:13\",\n        \"image_profile\": \"wCGXo_1690186384.jpg\",\n        \"is_active\": 1\n    }\n}"
+								}
+							]
+						}
+					],
+					"id": "6f54a858-5fd2-4a9b-a9d8-fe76eb47a59f"
+				},
+				{
+					"name": "Register",
+					"id": "3252d029-ee5a-43ac-8e57-f4ee5504172c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Rahmat Saefulloh",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rhmtsaepuloh@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Qwerty123!",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "Qwerty123!",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0893",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{api}}/api/register"
+					},
+					"response": [
+						{
+							"id": "648583b6-e6d5-4e76-871b-c78986d54b4d",
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Tatang Basher",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "tatang@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "secret",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "secret",
+											"type": "text"
+										},
+										{
+											"key": "role_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{api}}/api/register"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": 201,\n    \"message\": \"user registered successfully\",\n    \"success\": true,\n    \"data\": {\n        \"name\": \"Tatang Basher\",\n        \"email\": \"tatang@gmail.com\",\n        \"role_id\": \"1\",\n        \"unit_id\": \"1\",\n        \"updated_at\": \"2023-07-10T04:11:53.000000Z\",\n        \"created_at\": \"2023-07-10T04:11:53.000000Z\",\n        \"id\": 3\n    }\n}"
+						},
+						{
+							"id": "67e2aad1-d0db-4133-87a8-89a93ca88f41",
+							"name": "Failed - User Exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Tatang Basher",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "tatang@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "secret",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "secret",
+											"type": "text"
+										},
+										{
+											"key": "role_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{api}}/api/register"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": 400,\n    \"message\": \"The email has already been taken.\",\n    \"success\": false,\n    \"data\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"id": "2c429f4f-299b-4af1-bcc4-fb5d8271ac6b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "rhmtsaepuloh@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "reg_id",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{api}}/api/login"
+					},
+					"response": [
+						{
+							"id": "bf060db5-6585-42ca-a606-c841328b0f57",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "tatang@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "secret",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{api}}/api/login"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": 200,\n    \"message\": \"User logged in\",\n    \"success\": true,\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Tatang Basher\",\n        \"email\": \"tatang@gmail.com\",\n        \"email_verified_at\": null,\n        \"role_id\": 1,\n        \"created_at\": \"2023-07-06T07:23:06.000000Z\",\n        \"updated_at\": \"2023-07-06T07:23:06.000000Z\",\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4ODYzMjk3NSwiZXhwIjoxNjg4NjM2NTc1LCJuYmYiOjE2ODg2MzI5NzUsImp0aSI6IjlBcVJ6bkxwemJ2M1hPSmciLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.0WtCz_0JGT5pCC988EdSteTMHOJFZUZ_ZGgRB0iI5Po\"\n    }\n}"
+						},
+						{
+							"id": "8f3a14f1-2510-4c74-a79a-840505020ce0",
+							"name": "Failed - Incorrect Credentials",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "tatang@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "secret",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{api}}/api/login"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": 401,\n    \"message\": \"Invalid email or password\",\n    \"success\": false,\n    \"data\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"id": "452a55be-e050-4a4a-9857-e80d6165c462",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4ODYzNjQwMCwiZXhwIjoxNjg4NjQwMDAwLCJuYmYiOjE2ODg2MzY0MDAsImp0aSI6IjF0MFpLd2xFOTFOT3EwV3MiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1Di6lP5pYEnEXw_ajtmVIrxMsUfpcXb0pVc6TDFNuu0"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{api}}/api/logout"
+					},
+					"response": [
+						{
+							"id": "83740419-15d0-492b-b0f5-977657c7f9bf",
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{api}}/api/logout"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Successfully logged out\",\n    \"success\": false,\n    \"data\": {}\n}"
+						},
+						{
+							"id": "64d3b3c0-414b-4897-af59-1b6a9a0ce9d4",
+							"name": "Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{api}}/api/logout"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\r\n    \"code\": 403,\r\n    \"message\": \"Unauthenticate\",\r\n    \"success\": false,\r\n    \"data\": {}\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Forgot Password",
+					"id": "8c091239-585f-4282-bdf7-7e0304fdf843",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rhmtsaepuloh@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api}}/api/forgot-password"
+					},
+					"response": [
+						{
+							"id": "a12fc7e5-99a9-4602-b164-daff91e72032",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"rhmtsaepuloh@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{api}}/api/forgot-password"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Jul 2023 16:13:15 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Jul 2023 16:13:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": true,\n    \"message\": \"Success.\"\n}"
+						}
+					]
+				}
+			],
+			"id": "b6deb4b4-e94c-4e28-ad90-e884c09c80b4"
+		},
+		{
+			"name": "UPTD",
+			"item": [
+				{
+					"name": "Get All UPTD",
+					"id": "1650386b-fcaa-47e0-9071-ffd9028bd600",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{api}}/api/uptd"
+					},
+					"response": [
+						{
+							"id": "d8242f06-0438-4ebe-99ab-0238d10f57e2",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/uptd"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 02:41:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 02:41:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"message\": \"UPTD data\",\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Smartplan\",\n            \"address\": \"Cimahi\",\n            \"phone_number\": \"0895392054983\",\n            \"lat\": \"1\",\n            \"lng\": \"1\",\n            \"name_head_unit\": \"Rahmat\",\n            \"created_at\": \"2023-07-21T02:39:08.000000Z\",\n            \"updated_at\": \"2023-07-21T02:39:08.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Detail By Id",
+					"id": "e8e46b4c-b622-491a-89e1-316ced21c925",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY4OTkwNjQzNywiZXhwIjoxNjg5OTEwMDM3LCJuYmYiOjE2ODk5MDY0MzcsImp0aSI6Im02RFJZWGZjNDd5akRGQ0EiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CB7F1OcmBXrDeYAUabauQ7q4eAXkE5D1cIjzBWvymw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{api}}/api/uptd/1"
+					},
+					"response": [
+						{
+							"id": "fe8917cd-ccbb-4fa6-9e05-9c78b0042798",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/uptd/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 02:44:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jul 2023 02:44:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"message\": \"Report categories data\",\n    \"status\": true,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Smartplan\",\n        \"address\": \"Cimahi\",\n        \"phone_number\": \"0895392054983\",\n        \"lat\": \"1\",\n        \"lng\": \"1\",\n        \"name_head_unit\": \"Rahmat\",\n        \"created_at\": \"2023-07-21T02:39:08.000000Z\",\n        \"updated_at\": \"2023-07-21T02:39:08.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "353a7411-5fe3-4b57-8f37-d8667aa58f73"
+		},
+		{
+			"name": "Information",
+			"item": [
+				{
+					"name": "Get All",
+					"id": "e0ce43e1-a95e-4395-a351-5fe3669d1122",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{api}}/api/information"
+					},
+					"response": [
+						{
+							"id": "4572d4aa-87f4-4439-bc67-54257242b59b",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/information"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Jul 2023 02:39:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Jul 2023 02:39:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"title\": \"test\",\n            \"description\": \"Test\",\n            \"thumbnail\": \"http://127.0.0.1:8000/storage/thumbnails/9d7f1b9e041ab98b3b0298a2d454991f.jpg\",\n            \"is_active\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2023-07-12T22:57:46.000000Z\",\n            \"updated_at\": \"2023-07-12T22:58:02.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"test kedua\",\n            \"description\": \"test yaa\",\n            \"thumbnail\": \"http://127.0.0.1:8000/storage/thumbnails/20230721103747.png\",\n            \"is_active\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2023-07-21T03:37:47.000000Z\",\n            \"updated_at\": \"2023-07-21T03:37:47.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Tes ketiga\",\n            \"description\": \"test aja\",\n            \"thumbnail\": \"http://127.0.0.1:8000/storage/thumbnails/20230728091041.png\",\n            \"is_active\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2023-07-28T02:10:41.000000Z\",\n            \"updated_at\": \"2023-07-28T02:10:41.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Detail By Id",
+					"id": "bc6581ba-b66c-4ef5-8618-aed4268bb34a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{api}}/api/information/3"
+					},
+					"response": [
+						{
+							"id": "aa03250e-e116-4ef1-841b-02ef2fae9784",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/information/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Jul 2023 02:42:12 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Jul 2023 02:42:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": true,\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"test\",\n        \"description\": \"Test\",\n        \"thumbnail\": \"http://127.0.0.1:8000/storage/thumbnails/9d7f1b9e041ab98b3b0298a2d454991f.jpg\",\n        \"is_active\": 1,\n        \"deleted_at\": null,\n        \"created_at\": \"2023-07-12T22:57:46.000000Z\",\n        \"updated_at\": \"2023-07-12T22:58:02.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "775d527f-669d-49a5-bcf3-f9c533c09e71"
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Get All Report Categories",
+					"id": "4c8f24d9-5948-4d0c-aacc-ad51dfd3a8d5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{api}}/api/report/category"
+					},
+					"response": [
+						{
+							"id": "aac2b16f-7889-42a2-b5ea-126beebe5469",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/report/category"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jul 2023 15:51:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jul 2023 15:51:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"message\": \"Success\",\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"test draft\",\n            \"icon\": \"9d7f1b9e041ab98b3b0298a2d454991f.jpg\",\n            \"unit_id\": 5,\n            \"created_at\": \"2023-07-19T20:22:39.000000Z\",\n            \"updated_at\": \"2023-07-19T20:22:39.000000Z\",\n            \"deleted_at\": null,\n            \"is_active\": 1\n        },\n        {\n            \"id\": 4,\n            \"name\": \"test draft\",\n            \"icon\": \"Screenshot 2022-11-10 205208.png\",\n            \"unit_id\": 4,\n            \"created_at\": \"2023-07-19T20:40:48.000000Z\",\n            \"updated_at\": \"2023-07-19T20:40:48.000000Z\",\n            \"deleted_at\": null,\n            \"is_active\": 1\n        },\n        {\n            \"id\": 5,\n            \"name\": \"test draft\",\n            \"icon\": \"172134.jpg\",\n            \"unit_id\": 4,\n            \"created_at\": \"2023-07-19T20:41:05.000000Z\",\n            \"updated_at\": \"2023-07-19T20:41:05.000000Z\",\n            \"deleted_at\": null,\n            \"is_active\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get List Province",
+					"id": "d46aa8d4-960a-4374-b2a8-364de3e35903",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{api}}/api/province"
+					},
+					"response": [
+						{
+							"id": "4927b480-911d-4fa0-bac3-8b190ead6ca0",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/province"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jul 2023 15:43:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jul 2023 15:43:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"ACEH\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"SUMATERA UTARA\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"SUMATERA BARAT\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"RIAU\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"JAMBI\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"SUMATERA SELATAN\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"BENGKULU\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"LAMPUNG\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"KEP. BANGKA BELITUNG\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"KEP. RIAU\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"DKI JAKARTA\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"JAWA BARAT\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"JAWA TENGAH\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"DI YOGYAKARTA\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"JAWA TIMUR\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"BANTEN\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"BALI\"\n        },\n        {\n            \"id\": 18,\n            \"name\": \"NUSA TENGGARA BARAT\"\n        },\n        {\n            \"id\": 19,\n            \"name\": \"NUSA TENGGARA TIMUR\"\n        },\n        {\n            \"id\": 20,\n            \"name\": \"KALIMANTAN BARAT\"\n        },\n        {\n            \"id\": 21,\n            \"name\": \"KALIMANTAN TENGAH\"\n        },\n        {\n            \"id\": 22,\n            \"name\": \"KALIMANTAN SELATAN\"\n        },\n        {\n            \"id\": 23,\n            \"name\": \"KALIMANTAN TIMUR\"\n        },\n        {\n            \"id\": 24,\n            \"name\": \"KALIMANTAN UTARA\"\n        },\n        {\n            \"id\": 25,\n            \"name\": \"SULAWESI UTARA\"\n        },\n        {\n            \"id\": 26,\n            \"name\": \"SULAWESI TENGAH\"\n        },\n        {\n            \"id\": 27,\n            \"name\": \"SULAWESI SELATAN\"\n        },\n        {\n            \"id\": 28,\n            \"name\": \"SULAWESI TENGGARA\"\n        },\n        {\n            \"id\": 29,\n            \"name\": \"GORONTALO\"\n        },\n        {\n            \"id\": 30,\n            \"name\": \"SULAWESI BARAT\"\n        },\n        {\n            \"id\": 31,\n            \"name\": \"MALUKU\"\n        },\n        {\n            \"id\": 32,\n            \"name\": \"MALUKU UTARA\"\n        },\n        {\n            \"id\": 33,\n            \"name\": \"PAPUA BARAT\"\n        },\n        {\n            \"id\": 34,\n            \"name\": \"PAPUA\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Ticket Laporan",
+					"id": "c30027f6-d6c0-4f92-bd01-a0a1746f5631",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9zb2NpYWwtbG9naW4iLCJpYXQiOjE2OTE1NTM1ODEsImV4cCI6MTY5MTU1NzE4MSwibmJmIjoxNjkxNTUzNTgxLCJqdGkiOiJyb05XSVFFaDRSbmxQTFdyIiwic3ViIjoxMCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.o9wuLS2O75vx6cnONeIzWW3XQ9bvLGWRQDD4PFwhhqc"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "report_category_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "fullname",
+									"value": "Rahmat Saefulloh",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "l",
+									"type": "text"
+								},
+								{
+									"key": "province_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tipe_korban",
+									"value": "php",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Tes",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "lng",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "address_location",
+									"value": "Cimahi",
+									"type": "text"
+								},
+								{
+									"key": "userfile",
+									"type": "file",
+									"src": "/Users/rhmtsaepuloh/Downloads/gamaharsaasia.png"
+								},
+								{
+									"key": "urgency",
+									"value": "rendah",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{api}}/api/report"
+					},
+					"response": [
+						{
+							"id": "cab84d26-821f-4fcc-bf77-f803e104eda9",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "report_category_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "Rahmat Saefulloh",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "l",
+											"type": "text"
+										},
+										{
+											"key": "province_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "tipe_korban",
+											"value": "php",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Tes",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "lng",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "address_location",
+											"value": "Cimahi",
+											"type": "text"
+										},
+										{
+											"key": "userfile",
+											"type": "file",
+											"src": [
+												"/Users/rhmtsaepuloh/Downloads/5wPdO_1688622116.jpg"
+											]
+										}
+									]
+								},
+								"url": "{{api}}/api/report"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 16:47:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 16:47:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": true,\n    \"message\": \"Data laporan berhasil dikirim.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get My Report",
+					"id": "ae1fd2a3-0ca9-4d05-86a5-93d375335d82",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9zb2NpYWwtbG9naW4iLCJpYXQiOjE2OTM2MzE2NDUsImV4cCI6MTY5MzYzNTI0NSwibmJmIjoxNjkzNjMxNjQ1LCJqdGkiOiJNMk4xRFExUEZhb2ZMZEZGIiwic3ViIjoxMywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.YbW9DSoVwORkMkpVjD6xLFM163bGUU0h7xuFm7vVNQQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/api/report/my-report?per_page=10&page=1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"api",
+								"report",
+								"my-report"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "01eae3a0-528a-4324-a8c6-2af0eae3aae9",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/api/report/my-report?per_page=10&page=1",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"api",
+										"report",
+										"my-report"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 17:07:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 25 Jul 2023 17:07:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": true,\n    \"message\": \"Success.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 7,\n            \"report_category_id\": 3,\n            \"description\": \"Tes\",\n            \"attachment_image\": null,\n            \"attachment_video\": null,\n            \"tracking_id\": \"TK-230725-00001\",\n            \"lat\": \"1\",\n            \"lng\": \"1\",\n            \"address_location\": \"Cimahi\",\n            \"stat_progress\": \"open\",\n            \"created_at\": \"2023-07-25T16:37:41.000000Z\",\n            \"updated_at\": \"2023-07-25T16:37:41.000000Z\",\n            \"fullname\": \"Rahmat Saefulloh\",\n            \"province_id\": 1,\n            \"gender\": \"L\",\n            \"tipe_korban\": \"php\",\n            \"province\": {\n                \"id\": 1,\n                \"name\": \"ACEH\"\n            },\n            \"report_category\": {\n                \"id\": 3,\n                \"name\": \"test draft\",\n                \"icon\": \"9d7f1b9e041ab98b3b0298a2d454991f.jpg\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"user_id\": 7,\n            \"report_category_id\": 3,\n            \"description\": \"Tes\",\n            \"attachment_image\": \"qkqeT_1690303593.jpg\",\n            \"attachment_video\": null,\n            \"tracking_id\": \"TK-230725-00001\",\n            \"lat\": \"1\",\n            \"lng\": \"1\",\n            \"address_location\": \"Cimahi\",\n            \"stat_progress\": \"open\",\n            \"created_at\": \"2023-07-25T16:46:33.000000Z\",\n            \"updated_at\": \"2023-07-25T16:46:33.000000Z\",\n            \"fullname\": \"Rahmat Saefulloh\",\n            \"province_id\": 1,\n            \"gender\": \"L\",\n            \"tipe_korban\": \"php\",\n            \"province\": {\n                \"id\": 1,\n                \"name\": \"ACEH\"\n            },\n            \"report_category\": {\n                \"id\": 3,\n                \"name\": \"test draft\",\n                \"icon\": \"9d7f1b9e041ab98b3b0298a2d454991f.jpg\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"user_id\": 7,\n            \"report_category_id\": 3,\n            \"description\": \"Tes\",\n            \"attachment_image\": \"lyhh9_1690303662.jpg\",\n            \"attachment_video\": null,\n            \"tracking_id\": \"TK-230725-00002\",\n            \"lat\": \"1\",\n            \"lng\": \"1\",\n            \"address_location\": \"Cimahi\",\n            \"stat_progress\": \"open\",\n            \"created_at\": \"2023-07-25T16:47:42.000000Z\",\n            \"updated_at\": \"2023-07-25T16:47:42.000000Z\",\n            \"fullname\": \"Rahmat Saefulloh\",\n            \"province_id\": 1,\n            \"gender\": \"L\",\n            \"tipe_korban\": \"php\",\n            \"province\": {\n                \"id\": 1,\n                \"name\": \"ACEH\"\n            },\n            \"report_category\": {\n                \"id\": 3,\n                \"name\": \"test draft\",\n                \"icon\": \"9d7f1b9e041ab98b3b0298a2d454991f.jpg\"\n            }\n        }\n    ],\n    \"pagination\": {\n        \"current_page\": 1,\n        \"total_pages\": 1,\n        \"total_data\": 3\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Detail Report",
+					"id": "7a4e2e56-c406-4a47-aa65-017bed6ac6e4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9zb2NpYWwtbG9naW4iLCJpYXQiOjE2OTE1NTM1ODEsImV4cCI6MTY5MTU1NzE4MSwibmJmIjoxNjkxNTUzNTgxLCJqdGkiOiJyb05XSVFFaDRSbmxQTFdyIiwic3ViIjoxMCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.o9wuLS2O75vx6cnONeIzWW3XQ9bvLGWRQDD4PFwhhqc"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{api}}/api/report/1"
+					},
+					"response": [
+						{
+							"id": "c30bcc6a-73e7-4c67-bb9b-50eadf096555",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/report/4"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Jul 2023 08:19:48 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 4,\n        \"user_id\": 7,\n        \"report_category_id\": 3,\n        \"description\": \"Tes\",\n        \"attachment_image\": null,\n        \"attachment_video\": null,\n        \"tracking_id\": \"TK-230726-00001\",\n        \"lat\": \"1\",\n        \"lng\": \"1\",\n        \"address_location\": \"Cimahi\",\n        \"stat_progress\": \"open\",\n        \"is_active\": 1,\n        \"deleted_at\": null,\n        \"created_at\": \"2023-07-26T08:56:33.000000Z\",\n        \"updated_at\": \"2023-07-26T08:56:33.000000Z\",\n        \"fullname\": \"Rahmat Saefulloh\",\n        \"province_id\": 1,\n        \"gender\": \"L\",\n        \"tipe_korban\": \"php\",\n        \"user\": {\n            \"id\": 7,\n            \"name\": \"Rahmat Saefulloh\",\n            \"email\": \"rhmtsaepuloh@gmail.com\",\n            \"email_verified_at\": null,\n            \"role_id\": 2,\n            \"unit_id\": null,\n            \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n            \"updated_at\": \"2023-07-28T02:26:09.000000Z\",\n            \"deleted_at\": null,\n            \"provider_name\": null,\n            \"provider_id\": null,\n            \"phone_number\": null,\n            \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n            \"last_login\": \"2023-07-23 22:51:13\",\n            \"image_profile\": \"https://kpppa.folkatech.com/storage/image_profiles/DpofE_1690511169.png\",\n            \"is_active\": 1\n        },\n        \"province\": {\n            \"id\": 1,\n            \"name\": \"ACEH\"\n        },\n        \"report_category\": {\n            \"id\": 3,\n            \"name\": \"test draft\",\n            \"icon\": \"https://kpppa.folkatech.com/storage/icons/9d7f1b9e041ab98b3b0298a2d454991f.jpg\"\n        },\n        \"history_status\": {\n            \"id\": 1,\n            \"status\": \"open\",\n            \"created_at\": \"2023-07-26T08:56:33.000000Z\",\n            \"user_id\": 7,\n            \"user\": {\n                \"id\": 7,\n                \"name\": \"Rahmat Saefulloh\",\n                \"email\": \"rhmtsaepuloh@gmail.com\",\n                \"email_verified_at\": null,\n                \"role_id\": 2,\n                \"unit_id\": null,\n                \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n                \"updated_at\": \"2023-07-28T02:26:09.000000Z\",\n                \"deleted_at\": null,\n                \"provider_name\": null,\n                \"provider_id\": null,\n                \"phone_number\": null,\n                \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw\",\n                \"last_login\": \"2023-07-23 22:51:13\",\n                \"image_profile\": \"https://kpppa.folkatech.com/storage/image_profiles/DpofE_1690511169.png\",\n                \"is_active\": 1\n            }\n        },\n        \"discussion\": [\n            {\n                \"id\": 1,\n                \"description\": \"tes\",\n                \"created_at\": \"2023-07-27T02:55:48.000000Z\",\n                \"attachment\": \"\",\n                \"user\": {\n                    \"id\": 7,\n                    \"name\": \"Rahmat Saefulloh\",\n                    \"email\": \"rhmtsaepuloh@gmail.com\",\n                    \"role_id\": 2,\n                    \"unit_id\": null,\n                    \"created_at\": \"2023-07-21T02:27:00.000000Z\",\n                    \"phone_number\": null,\n                    \"image_profile\": \"https://kpppa.folkatech.com/storage/image_profiles/DpofE_1690511169.png\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Discussion (Komentar)",
+					"id": "4778f202-df32-4a5d-8cc2-04e271829bf0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MDEyNzQ3MywiZXhwIjoxNjkwMTMxMDczLCJuYmYiOjE2OTAxMjc0NzMsImp0aSI6IjNwbGZoWkU2ZlNsRjhUQ1MiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.U0428KSALubm7ayf4Pq_UE-3cLIE4iPm1_16njCD7dw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "report_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "tes",
+									"type": "text"
+								},
+								{
+									"key": "userfile",
+									"type": "file",
+									"src": "/Users/rhmtsaepuloh/Downloads/5wPdO_1688622116.jpg"
+								}
+							]
+						},
+						"url": "{{api}}/api/report/discussion"
+					},
+					"response": [
+						{
+							"id": "984dcccc-a463-45c2-8089-88e4060dce21",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "report_id",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "tes",
+											"type": "text"
+										},
+										{
+											"key": "userfile",
+											"type": "file",
+											"src": [
+												"/Users/rhmtsaepuloh/Downloads/5wPdO_1688622116.jpg"
+											]
+										}
+									]
+								},
+								"url": "{{api}}/api/report/discussion"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Jul 2023 02:55:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Jul 2023 02:55:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": true,\n    \"message\": \"Data berhasil dikirim.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get History Status By Id Laporan",
+					"id": "86510236-7a67-4d66-8da2-23f06bcbb3a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MTIyOTM2NSwiZXhwIjoxNjkxMjMyOTY1LCJuYmYiOjE2OTEyMjkzNjUsImp0aSI6IjlTTTBVZE1lVTVtN0htZUQiLCJzdWIiOjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.GLbcGn3wAiLac6Qeks4cfy8EAG8UwMD0GcVLEcn48_w"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{api}}/api/report/history-status/5"
+					},
+					"response": [
+						{
+							"id": "8292ccc8-71ae-401e-95eb-ce8bdf61b427",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/report/history-status/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Aug 2023 09:56:18 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"report_id\": 5,\n            \"user_id\": 11,\n            \"status\": \"open\",\n            \"deleted_at\": null,\n            \"created_at\": \"2023-08-03T03:35:28.000000Z\",\n            \"updated_at\": \"2023-08-03T03:35:28.000000Z\",\n            \"user\": {\n                \"id\": 11,\n                \"name\": \"Lana Septiana\",\n                \"email\": \"lana.septiana2@gmail.com\",\n                \"email_verified_at\": null,\n                \"role_id\": 2,\n                \"unit_id\": null,\n                \"created_at\": \"2023-07-31T10:57:17.000000Z\",\n                \"updated_at\": \"2023-08-03T06:54:01.000000Z\",\n                \"deleted_at\": null,\n                \"provider_name\": null,\n                \"provider_id\": null,\n                \"phone_number\": null,\n                \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva3BwcGEuZm9sa2F0ZWNoLmNvbVwvYXBpXC9sb2dpbiIsImlhdCI6MTY5MTA0NTY0MSwiZXhwIjoxNjkxMDQ5MjQxLCJuYmYiOjE2OTEwNDU2NDEsImp0aSI6InlYTGY5Q29oS3MyUEVpb3AiLCJzdWIiOjExLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.5W_lIJ3DG2vL_u-hgNfAdGA415wSrnxsf7IFJ1ZlL-Y\",\n                \"last_login\": \"2023-08-03 13:54:01\",\n                \"image_profile\": \"https://kpppa.folkatech.com/storage/image_profiles/GoLnR_1690950235.jpg\",\n                \"is_active\": 1,\n                \"token_forgot\": null,\n                \"province_id\": null,\n                \"reg_id\": \"e1jhnVXlRZm1GaeZaJrXbe:APA91bE6ZZLEMjaFlURa8AcUh1fDcC2zbULqSkgREh3nZduJqGLkzow8MtkBnPGPf3orywTmbiSza2L1Q59SrinobfXQRnZCvcgu45V-euyhgGGWKUeWmYCEvfKOKBDKoDD4AlUoVz4B\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"id": "b2b4b94d-b08f-4233-a62d-a60099a8bbe6"
+		},
+		{
+			"name": "General Setting",
+			"item": [
+				{
+					"name": "Get Setting",
+					"id": "1ae94a63-1287-4c79-9e3e-927546e9df8f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{api}}/api/general-setting"
+					},
+					"response": [
+						{
+							"id": "4c5b24a1-3f19-46e3-a51f-7166d7db1418",
+							"name": "200 - OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{api}}/api/general-setting"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Aug 2023 18:04:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Aug 2023 18:04:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"speed_dial_number\": \"0895392054983\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "c595974c-6d33-4071-a502-cd3e8f010240"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2b89c98e-c5b9-4389-9588-35173c308ac1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a46924aa-6bcc-4032-a958-f650a697757a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "https://lapor.folkatech.com",
+			"type": "string"
+		}
+	]
+}
