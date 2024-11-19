@@ -1324,7 +1324,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e3bd81f9-ecc3-40e4-a7af-d5aa0ba80408",
+								"id": "427b3cf8-7163-44da-beac-078f20114c1c",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {\r",
 									"    pm.response.to.have.status(201);\r",
@@ -1354,6 +1354,22 @@
 									"    pm.expect(pm.response.responseTime).to.be.below(1000); // Response time < 1000ms\r",
 									"});\r",
 									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "45785027-d00e-481b-9c02-c58f98ac5ab5",
+								"exec": [
+									"pm.environment.set(\"token\", \"Bearer your_access_token\");\r",
+									"pm.request.headers.add({\r",
+									"    key: \"Authorization\",\r",
+									"    value: pm.environment.get(\"token\")\r",
+									"});\r",
 									""
 								],
 								"type": "text/javascript",
