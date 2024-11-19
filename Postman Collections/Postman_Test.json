@@ -1320,6 +1320,47 @@
 				},
 				{
 					"name": "Create Ticket Laporan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "427b3cf8-7163-44da-beac-078f20114c1c",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains valid JSON structure\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"status\");\r",
+									"    pm.expect(jsonData).to.have.property(\"message\", \"Laporan berhasil dibuat\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Valid response time\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000); // Response time < 1000ms\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Error message appears\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"error\");\r",
+									"    pm.expect(jsonData.error).to.include(\"Deskripsi wajib diisi\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Valid response time\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000); // Response time < 1000ms\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "c30027f6-d6c0-4f92-bd01-a0a1746f5631",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
